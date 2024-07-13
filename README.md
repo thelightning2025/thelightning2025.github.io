@@ -7,4 +7,3 @@
 - [https://x.com/theLightning25](https://x.com/theLightning25)
 - [https://www.reddit.com/user/EyeNo4657/](https://www.reddit.com/user/EyeNo4657/)
 - [https://thelightning2025.quora.com/](https://thelightning2025.quora.com/)
-- 
