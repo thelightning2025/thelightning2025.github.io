@@ -19,6 +19,18 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .user-info img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .user-info h2, .user-info p {
+            margin: 0;
+        }
         .gallery {
             column-count: 3;
             column-gap: 20px;
@@ -46,24 +58,21 @@
             bottom: 0;
             width: 100%;
             box-sizing: border-box;
-            text-align: left;
+            text-align: center;
             border-top: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .caption .user-info {
-            display: flex;
-            align-items: center;
-        }
-        .caption .user-info img {
-            border-radius: 50%;
-            margin-right: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="user-info">
+            <img id="user-photo" src="" alt="User Photo" width="50">
+            <div>
+                <h2 id="user-handle"></h2>
+                <p>Badge: <span id="user-badge"></span></p>
+            </div>
+        </div>
+        
         <div class="gallery" id="gallery"></div>
     </div>
 
@@ -71,28 +80,29 @@
     <script>
         $(document).ready(function() {
             $.getJSON('gallery.json', function(data) {
+                // Assuming data is an array of objects
+                let userInfo = data[0].user;  // Use first user data for simplicity
+                $('#user-photo').attr('src', userInfo.photo_url);
+                $('#user-handle').text(userInfo.display_handle);
+                $('#user-badge').text(userInfo.badge || 'N/A');
+
                 // Clear previous gallery content
                 $('#gallery').empty();
 
-                // Process each item in the data array
+                // Filter items to show only cover images
                 $.each(data, function(index, item) {
-                    // Filter to find cover responses
+                    // Find cover response
                     let coverResponse = item.responses.find(response => response.response_id === item.cover_response_id);
 
                     if (coverResponse) {
                         // Construct the URL for the image
                         let imageUrl = 'https://ideogram.ai/assets/progressive-image/balanced/response/' + coverResponse.response_id;
 
-                        // Create the gallery item with caption and user info
+                        // Create the gallery item with caption
                         let galleryItem = `
                             <div class="gallery-item">
                                 <img src="${imageUrl}" alt="${coverResponse.prompt}">
-                                <div class="caption">
-                                    <div class="user-info">
-                                        <img src="${item.user.photo_url}" alt="${item.user.display_handle}" width="40">
-                                        <span>${item.user.display_handle}</span> - <span>${item.caption || 'No caption available'}</span>
-                                    </div>
-                                </div>
+                                <div class="caption">${item.caption || 'No caption available'}</div>
                             </div>
                         `;
 
