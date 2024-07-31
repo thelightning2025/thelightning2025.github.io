@@ -78,22 +78,25 @@
                 // Clear previous gallery content
                 $('#gallery').empty();
 
-                // Loop through each item and add to gallery
+                // Filter items to show only cover images
                 $.each(data, function(index, item) {
-                    $.each(item.responses, function(responseIndex, response) {
+                    // Find cover response
+                    let coverResponse = item.responses.find(response => response.response_id === item.cover_response_id);
+
+                    if (coverResponse) {
                         // Construct the URL for the image
-                        let imageUrl = 'https://ideogram.ai/assets/progressive-image/balanced/response/' + response.cover_response_id;
+                        let imageUrl = 'https://ideogram.ai/assets/progressive-image/balanced/response/' + coverResponse.response_id;
 
                         // Create the gallery item
                         let galleryItem = `
                             <div class="gallery-item">
-                                <img src="${imageUrl}" alt="${response.prompt}">
+                                <img src="${imageUrl}" alt="${coverResponse.prompt}">
                             </div>
                         `;
 
                         // Append to gallery
                         $('#gallery').append(galleryItem);
-                    });
+                    }
                 });
 
                 // Set caption for the first item
