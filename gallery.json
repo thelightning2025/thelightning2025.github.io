@@ -1,0 +1,175 @@
+[
+    {
+        "user": {
+            "user_id": "WtyEef2mSbKN-mE_UNPKtw",
+            "photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJLj-zoHyKqO-i7lDUMborWJ2pQN5_K4VX-a7tSTrR30_ZhVC0=s96-c",
+            "display_handle": "blissogini",
+            "subscription_plan_id": null,
+            "badge": "BRONZE"
+        },
+        "user_prompt": "A captivating 3D rendering of the \" Elixir\" logo, with the inscription\"Earn like never before \" below the logo featuring a hypnotic liquid-style blue font on a gold wall, that mesmerizes the viewer. The design is further enhanced by the inclusion of water droplets of various sizes, which encircle the logo and create a refreshing, eye-catching dimension. This innovative and unforgettable design truly embodies the essence of aura, standing out with an undeniable impact., typography, vibrant, 3d render",
+        "private": false,
+        "request_id": "_8kKNL8SR0WIqEV3LI57hw",
+        "request_type": "TEXT_TO_IMAGE",
+        "responses": [
+            {
+                "response_id": "6wAU4v-BTPyJ-NrqVJR0wQ",
+                "prompt": "A captivating 3D rendering of the \" Elixir\" logo, with the inscription\"Earn like never before \" below the logo featuring a hypnotic liquid-style blue font on a gold wall, that mesmerizes the viewer. The design is further enhanced by the inclusion of water droplets of various sizes, which encircle the logo and create a refreshing, eye-catching dimension. This innovative and unforgettable design truly embodies the essence of aura, standing out with an undeniable impact., typography, vibrant, 3d render",
+                "self_like": false,
+                "num_likes": 9,
+                "num_remixes": 1,
+                "highest_fidelity": false,
+                "pin_on_profile": true,
+                "cover": true,
+                "is_autoprompt": false,
+                "descriptions": []
+            },
+            {
+                "response_id": "dPtgaIFwTGWOv16cHTjbOg",
+                "prompt": "A captivating 3D rendering of the \" Elixir\" logo, with the inscription\"Earn like never before \" below the logo featuring a hypnotic liquid-style blue font on a gold wall, that mesmerizes the viewer. The design is further enhanced by the inclusion of water droplets of various sizes, which encircle the logo and create a refreshing, eye-catching dimension. This innovative and unforgettable design truly embodies the essence of aura, standing out with an undeniable impact., typography, vibrant, 3d render",
+                "self_like": false,
+                "num_likes": 3,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": false,
+                "descriptions": []
+            },
+            {
+                "response_id": "f0zAxedPTFOiXK2T59g5Cw",
+                "prompt": "A captivating 3D rendering of the \" Elixir\" logo, with the inscription\"Earn like never before \" below the logo featuring a hypnotic liquid-style blue font on a gold wall, that mesmerizes the viewer. The design is further enhanced by the inclusion of water droplets of various sizes, which encircle the logo and create a refreshing, eye-catching dimension. This innovative and unforgettable design truly embodies the essence of aura, standing out with an undeniable impact., typography, vibrant, 3d render",
+                "self_like": false,
+                "num_likes": 1,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "pin_on_profile": true,
+                "cover": false,
+                "is_autoprompt": false,
+                "descriptions": []
+            },
+            {
+                "response_id": "yFs1yPiKQJuhD8OlOkWF-w",
+                "prompt": "A captivating 3D rendering of the \" Elixir\" logo, with the inscription\"Earn like never before \" below the logo featuring a hypnotic liquid-style blue font on a gold wall, that mesmerizes the viewer. The design is further enhanced by the inclusion of water droplets of various sizes, which encircle the logo and create a refreshing, eye-catching dimension. This innovative and unforgettable design truly embodies the essence of aura, standing out with an undeniable impact., typography, vibrant, 3d render",
+                "self_like": false,
+                "num_likes": 2,
+                "num_remixes": 1,
+                "highest_fidelity": true,
+                "pin_on_profile": true,
+                "cover": false,
+                "is_autoprompt": false,
+                "descriptions": []
+            }
+        ],
+        "creation_time_float": 1722355073.491694,
+        "resolution": 1024,
+        "height": 1024,
+        "width": 1024,
+        "user_hparams": {
+            "style": "photo",
+            "aspect_ratio": "1:1"
+        },
+        "seed": 366591916,
+        "aspect_ratio": "1:1",
+        "model_version": "V_0_3",
+        "cover_response_id": "6wAU4v-BTPyJ-NrqVJR0wQ",
+        "is_completed": true,
+        "sampling_speed": 0,
+        "can_upscale": true,
+        "caption": "A captivating 3D rendering of the \" Elixir\" logo, with the inscription\"Earn like never before \" below the logo featuring a hypnotic liquid-style blue font on a gold wall, that mesmerizes the viewer. The design is further enhanced by the inclusion of water droplets of various sizes, which encircle the logo and create a refreshing, eye-catching dimension. This innovative and unforgettable design truly embodies the essence of aura, standing out with an undeniable impact., typography, vibrant, 3d render"
+    },
+    {
+        "user": {
+            "user_id": "kWbuiE_6SIu_gS6tFgABZQ",
+            "photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKKDeVi7g4hn6YmIpgBK9rs9W-Ip-KQfqS5ao10J9bPnNOUqA=s96-c",
+            "display_handle": "wearyouf",
+            "subscription_plan_id": null,
+            "badge": null
+        },
+        "user_prompt": "leon ultrarealista satanico",
+        "private": false,
+        "request_id": "-AAPYPR8T4uVp-kX258gJQ",
+        "request_type": "TEXT_TO_IMAGE",
+        "responses": [
+            {
+                "response_id": "Q0ktA0c-QCOXi-ZC9PMm0A",
+                "prompt": "leon ultrarealista satanico",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": false,
+                "descriptions": []
+            },
+            {
+                "response_id": "U7a11jmxTwq_0OAs11bpLg",
+                "prompt": "A chilling and intricate ultrarealista painting of the iconic devil character, Leon. He is portrayed with a menacing grin, sharp horns, and piercing red eyes. Leon is wearing a dark suit with a crimson tie, and his body is covered in intricate tattoos. The background is a blend of deep reds and blacks, with distorted, twisted imagery that adds to the sinister atmosphere. The overall tone of the painting evokes a sense of fear and fascination.",
+                "self_like": false,
+                "num_likes": 1,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": true,
+                "descriptions": []
+            },
+            {
+                "response_id": "ak8jnH9AT66jalYm3BEBKQ",
+                "prompt": "A captivating ultra-realistic portrait of a devilish figure, Leon Satanico, with an intense and sinister gaze. His face is adorned with sharp features, dark makeup, and a slight smirk. His eyes pierce through the viewer, as if he is inviting them into his dark world. The background is a deep, mysterious abyss that adds a sense of depth and intrigue to the scene. The overall atmosphere is eerie, provocative, and unnerving.",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": true,
+                "descriptions": []
+            },
+            {
+                "response_id": "jVvm3OpiTn27rMDxfO2UwQ",
+                "prompt": "A hauntingly realistic portrait of a devilish figure, titled \"Leon Ultrarealista Satanico\". The subject is depicted with a sinister grin, piercing red eyes, and a sharp, pointed chin. His skin is an unnerving shade of gray, and his hair is slicked back and dark. The background is a dark, brooding landscape with towering, twisted trees and a foreboding sky. The overall composition of the piece is striking and unsettling, leaving the viewer with a sense of unease.",
+                "self_like": false,
+                "num_likes": 8,
+                "num_remixes": 0,
+                "highest_fidelity": true,
+                "cover": true,
+                "is_autoprompt": true,
+                "descriptions": []
+            }
+        ],
+        "creation_time_float": 1722352862.408661,
+        "resolution": 1024,
+        "height": 1024,
+        "width": 1024,
+        "user_hparams": {
+            "style": "photo",
+            "aspect_ratio": "1:1"
+        },
+        "seed": 802493694,
+        "variation_parent": {
+            "request_id": "oT30NjfGQhSqs6D0-orF0g",
+            "response_id": "dHY3oS4vSdCtk9o1oBacQg",
+            "height": 1024,
+            "width": 1024,
+            "user_hparams": {
+                "style": "photo",
+                "aspect_ratio": "1:1"
+            },
+            "user": {
+                "user_id": "kWbuiE_6SIu_gS6tFgABZQ",
+                "photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKKDeVi7g4hn6YmIpgBK9rs9W-Ip-KQfqS5ao10J9bPnNOUqA=s96-c",
+                "display_handle": "wearyouf",
+                "subscription_plan_id": null,
+                "badge": null
+            },
+            "should_hide": false
+        },
+        "variation_strength": 75,
+        "image_weight": 50,
+        "aspect_ratio": "1:1",
+        "model_version": "V_0_3",
+        "cover_response_id": "jVvm3OpiTn27rMDxfO2UwQ",
+        "is_completed": true,
+        "sampling_speed": 0,
+        "can_upscale": true,
+        "caption": "leon ultrarealista satanico"
+    }
+]
