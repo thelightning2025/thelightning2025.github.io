@@ -69,14 +69,16 @@
                 $('#user-handle').text(data.user.display_handle);
                 $('#user-badge').text(data.user.badge);
 
-                // Cover response
+                // Find cover response
                 let coverResponse = data.responses.find(response => response.cover);
                 if (!coverResponse && data.responses.length > 0) {
                     coverResponse = data.responses[0];
                 }
 
                 // Image and caption
-                $('#image').attr('src', 'https://example.com/image-path.jpg'); // Update with the actual image URL if available
+                if (coverResponse) {
+                    $('#image').attr('src', 'https://ideogram.ai/assets/progressive-image/balanced/response/' + coverResponse.response_id);
+                }
                 $('#caption').text(data.caption);
             });
         });
