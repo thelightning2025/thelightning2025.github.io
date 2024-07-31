@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .user-info img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .caption {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="user-info">
+            <img id="user-photo" src="" alt="User Photo" width="50">
+            <div>
+                <h2 id="user-handle"></h2>
+                <p>Badge: <span id="user-badge"></span></p>
+            </div>
+        </div>
+        
+        <div class="image-container">
+            <img id="image" src="" alt="Elixir Logo">
+        </div>
+        
+        <div class="caption" id="caption"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON('data.json', function(data) {
+                // User info
+                $('#user-photo').attr('src', data.user.photo_url);
+                $('#user-handle').text(data.user.display_handle);
+                $('#user-badge').text(data.user.badge);
+
+                // Cover response
+                let coverResponse = data.responses.find(response => response.cover);
+                if (!coverResponse && data.responses.length > 0) {
+                    coverResponse = data.responses[0];
+                }
+
+                // Image and caption
+                $('#image').attr('src', 'https://example.com/image-path.jpg'); // Update with the actual image URL if available
+                $('#caption').text(data.caption);
+            });
+        });
+    </script>
+</body>
+</html>
