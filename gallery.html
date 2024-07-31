@@ -44,9 +44,12 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .caption {
-            margin-top: 20px;
-            font-size: 1.1em;
+            margin-top: 10px;
+            font-size: 0.9em;
             color: #555;
+        }
+        .caption-container {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -61,8 +64,6 @@
         </div>
         
         <div class="gallery" id="gallery"></div>
-        
-        <div class="caption" id="caption"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -87,10 +88,13 @@
                         // Construct the URL for the image
                         let imageUrl = 'https://ideogram.ai/assets/progressive-image/balanced/response/' + coverResponse.response_id;
 
-                        // Create the gallery item
+                        // Create the gallery item with caption
                         let galleryItem = `
                             <div class="gallery-item">
                                 <img src="${imageUrl}" alt="${coverResponse.prompt}">
+                                <div class="caption-container">
+                                    <div class="caption">${item.caption || 'No caption available'}</div>
+                                </div>
                             </div>
                         `;
 
@@ -98,11 +102,6 @@
                         $('#gallery').append(galleryItem);
                     }
                 });
-
-                // Set caption for the first item
-                if (data.length > 0) {
-                    $('#caption').text(data[0].caption || 'No caption available');
-                }
             });
         });
     </script>
