@@ -79,8 +79,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
+            // Function to shuffle an array
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
             $.getJSON('gallery.json', function(data) {
-                // Assuming data is an array of objects
+                // Shuffle the data array
+                data = shuffleArray(data);
+
                 let userInfo = data[0].user;  // Use first user data for simplicity
                 $('#user-photo').attr('src', userInfo.photo_url);
                 $('#user-handle').text(userInfo.display_handle);
