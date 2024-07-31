@@ -68,7 +68,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            $.getJSON('data.json', function(data) {
+            $.getJSON('gallery.json', function(data) {
                 // Assuming data is an array of objects
                 let userInfo = data[0].user;  // Use first user data for simplicity
                 $('#user-photo').attr('src', userInfo.photo_url);
