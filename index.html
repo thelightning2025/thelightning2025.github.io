@@ -1,50 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HVTXE7SR4H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HVTXE7SR4H');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Bookmark</title>
+    <title>Prompt Collection for AI-generated Image Album</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            padding: 20px;
+            background-color: #f0f0f0;
         }
-        iframe {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .user-info img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .user-info h2, .user-info p {
+            margin: 0;
+        }
+        .gallery {
+            column-count: 3;
+            column-gap: 20px;
+        }
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-item img {
             width: 100%;
-            height: 300px;
-            border: none; /* Optional: Remove border */
+            height: auto;
+            display: block;
+        }
+        .caption {
+            padding: 10px;
+            font-size: 0.9em;
+            color: #555;
+            background: #fff;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            border-top: 1px solid #eee;
         }
     </style>
-
-
-    
 </head>
-<body><a href="https://yo.fan/p/Xlu5nfMOZb7">Link</a> |      
-<a href="https://yo.fan/p/WAsqYqdtvjG">Link</a> | 
-<a href="https://yo.fan/p/2dJsFhumG9a">Link</a> | 
-<a href="https://yo.fan/p/KU4bnuyWu23">Link</a> |     
-<a href="https://yo.fan/p/gyt2fCq3Opr">Link</a> |     
-<a href="https://yo.fan/p/ovkarWHxwOq">Link</a> |     
-<a href="https://yo.fan/p/zJqnMf7bcmM">Link</a> 
-    <iframe src="https://yo.fan/p/WokQBZyBTGt"></iframe>
-    <iframe src="https://yo.fan/p/Xlu5nfMOZb7"></iframe>      
-    <iframe src="https://yo.fan/p/WAsqYqdtvjG"></iframe>
-    <iframe src="https://yo.fan/p/2dJsFhumG9a"></iframe> 
-    <iframe src="https://yo.fan/p/KU4bnuyWu23"></iframe>     
-    <iframe src="https://yo.fan/p/gyt2fCq3Opr"></iframe>     
-    <iframe src="https://yo.fan/p/ovkarWHxwOq"></iframe>     
-    <iframe src="https://yo.fan/p/zJqnMf7bcmM"></iframe>
-    <iframe src="https://www.quora.com/profile/Rachel-Darvall/How-Would-President-Kamala-Harris-Address-Key-Issues-In-a-hypothetical-scenario-where-Kamala-Harris-becomes-President"></iframe>     
+<body>
+    <div class="container">
+        <div class="user-info">
+            <img id="user-photo" src="" alt="User Photo" width="50">
+            <div>
+                <h2 id="user-handle"></h2>
+                <p>Badge: <span id="user-badge"></span></p>
+            </div>
+        </div>
+        
+        <div class="gallery" id="gallery"></div>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to shuffle an array
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            $.getJSON('gallery.json', function(data) {
+                // Shuffle the data array
+                data = shuffleArray(data);
+
+                let userInfo = data[0].user;  // Use first user data for simplicity
+                $('#user-photo').attr('src', userInfo.photo_url);
+                $('#user-handle').text(userInfo.display_handle);
+                $('#user-badge').text(userInfo.badge || 'N/A');
+
+                // Clear previous gallery content
+                $('#gallery').empty();
+
+                // Filter items to show only cover images
+                $.each(data, function(index, item) {
+                    // Find cover response
+                    let coverResponse = item.responses.find(response => response.response_id === item.cover_response_id);
+
+                    if (coverResponse) {
+                        // Construct the URL for the image
+                        let imageUrl = 'https://ideogram.ai/assets/progressive-image/balanced/response/' + coverResponse.response_id;
+
+                        // Create the gallery item with caption
+                        let galleryItem = `
+                            <div class="gallery-item">
+                                <img src="${imageUrl}" alt="${coverResponse.prompt}">
+                                <div class="caption">${item.caption || 'No caption available'}</div>
+                            </div>
+                        `;
+
+                        // Append to gallery
+                        $('#gallery').append(galleryItem);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
